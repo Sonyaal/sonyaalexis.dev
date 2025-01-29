@@ -14,6 +14,7 @@ function Main() {
   const descriptions = [
     "A computer engineer.",
     "A passionate problem solver.",
+    "A USC Trojan.",
     "A curious thinker."
   ];
 

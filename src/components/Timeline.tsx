@@ -25,7 +25,7 @@ function Timeline() {
             <h3 className="vertical-timeline-element-title">USC Makers</h3>
             <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
             <p>
-              Developer, Currently designing an EEG controlled drone
+              Developer, Designing EEG controlled drone
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
@@ -51,7 +51,7 @@ function Timeline() {
             <h3 className="vertical-timeline-element-title">Research Intern at EMOTIV</h3>
             <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
             <p>
-              Compiled research for an IFU (patient and clinical) for the EPOC X Device, a 14 Channel Wireless EEG Headset
+              Compiled research for IFU (patient and clinical) for the EPOC X Device, 14 Channel Wireless EEG Headset
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>
