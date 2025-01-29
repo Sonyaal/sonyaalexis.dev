@@ -1,7 +1,7 @@
 import React from "react";
 import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faDocker, faRaspberryPi } from '@fortawesome/free-brands-svg-icons';
+import { faPython, faDocker, faRaspberryPi } from '@fortawesome/free-brands-svg-icons';
 import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
 
@@ -43,7 +43,7 @@ function Expertise() {
             <h1>Expertise</h1>
             <div className="skills-grid">
                 <div className="skill">
-                    <FontAwesomeIcon icon={faReact} size="3x"/>
+                    <FontAwesomeIcon icon={faPython} size="3x"/>
                     <h3>Software Development</h3>
                     <p>I have worked with a diverse array of languages from python to C++ for backend development and utilize modern technologies such as React and Flask for frontend development.</p>
                     <div className="flex-chips">
