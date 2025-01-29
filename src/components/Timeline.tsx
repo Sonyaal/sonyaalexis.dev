@@ -36,7 +36,7 @@ function Timeline() {
             <h3 className="vertical-timeline-element-title">Research Intern at EMOTIV</h3>
             <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
             <p>
-              Financial Pitchbook Analysis, Launched process of 510k FDA clearance
+              Compiled research for an IFU (patient and clinical) for the EPOC X device (14 Channel Wireless EEG Headset).
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>
