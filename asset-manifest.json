@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/sonya.alexis/static/css/main.d5d872ce.css",
+    "main.js": "/sonya.alexis/static/js/main.ec071c4e.js",
+    "static/js/453.b05d8aa5.chunk.js": "/sonya.alexis/static/js/453.b05d8aa5.chunk.js",
+    "static/media/bg-dark.png": "/sonya.alexis/static/media/bg-dark.1744c5808adb39200369.png",
+    "static/media/headshot.png": "/sonya.alexis/static/media/headshot.93cf8c84e9e099f41b1c.png",
+    "static/media/bg-light.png": "/sonya.alexis/static/media/bg-light.bac0efb485244a522981.png",
+    "static/media/project1.png": "/sonya.alexis/static/media/project1.dbcd6191cc7ddffe56cd.png",
+    "index.html": "/sonya.alexis/index.html",
+    "main.d5d872ce.css.map": "/sonya.alexis/static/css/main.d5d872ce.css.map",
+    "main.ec071c4e.js.map": "/sonya.alexis/static/js/main.ec071c4e.js.map",
+    "453.b05d8aa5.chunk.js.map": "/sonya.alexis/static/js/453.b05d8aa5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d5d872ce.css",
+    "static/js/main.ec071c4e.js"
+  ]
+}
