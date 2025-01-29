@@ -1,3 +1,14 @@
+.items-container {
+    padding: 5% 10%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    svg {
+        color: white;
+    }
+}
+
 .vertical-timeline span {
     color: white;
     font-family: 'Courier Prime', monospace;
