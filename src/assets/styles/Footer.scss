@@ -2,7 +2,9 @@ footer {
     text-align: center;
     padding-top: 50px;
     padding-bottom: 50px;
-
+    background-color: #f0f0f0; /* Light gray background */
+    border-top: 2px solid #ccc; /* Adds a subtle line at the top */
+    
     svg {
         width: 1.1em !important;
         height: 1.1em !important;
@@ -11,5 +13,16 @@ footer {
 
     p {
         font-size: 0.8em;
+    }
+
+    /* Optional: Style the links */
+    a {
+        text-decoration: none;
+        color: #333;
+        transition: color 0.3s ease;
+    }
+
+    a:hover {
+        color: #0073b1; /* Change color when hovering */
     }
 }
