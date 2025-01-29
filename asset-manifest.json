@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/sonya.alexis/static/css/main.d5d872ce.css",
-    "main.js": "/sonya.alexis/static/js/main.26c3f1b0.js",
+    "main.js": "/sonya.alexis/static/js/main.85bcb5c4.js",
     "static/js/453.b05d8aa5.chunk.js": "/sonya.alexis/static/js/453.b05d8aa5.chunk.js",
     "static/media/bg-dark.png": "/sonya.alexis/static/media/bg-dark.1744c5808adb39200369.png",
     "static/media/headshot.png": "/sonya.alexis/static/media/headshot.93cf8c84e9e099f41b1c.png",
@@ -9,11 +9,11 @@
     "static/media/project1.png": "/sonya.alexis/static/media/project1.dbcd6191cc7ddffe56cd.png",
     "index.html": "/sonya.alexis/index.html",
     "main.d5d872ce.css.map": "/sonya.alexis/static/css/main.d5d872ce.css.map",
-    "main.26c3f1b0.js.map": "/sonya.alexis/static/js/main.26c3f1b0.js.map",
+    "main.85bcb5c4.js.map": "/sonya.alexis/static/js/main.85bcb5c4.js.map",
     "453.b05d8aa5.chunk.js.map": "/sonya.alexis/static/js/453.b05d8aa5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d5d872ce.css",
-    "static/js/main.26c3f1b0.js"
+    "static/js/main.85bcb5c4.js"
   ]
 }
