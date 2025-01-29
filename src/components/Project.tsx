@@ -34,7 +34,7 @@ function Project() {
                         </div>
                         <div className="project-details">
                             <h2>Visual Regression Testing</h2>
-                            <p>Developed a Visual Regression Testing Library for pixel-by-pixel comparison of widgets in the CI pipeline for PRs.</p>
+                            <p>Designed a Visual Regression Testing Library for pixel-by-pixel comparison of widgets in the CI pipeline for PRs.</p>
                         </div>
                     </div>
                 {/* </Link> */}
@@ -47,7 +47,7 @@ function Project() {
                         </div>
                         <div className="project-details">
                             <h2>Graphene-Based Pressure Sensor</h2>
-                            <p>Utilizing a two-dimensional carbon-based nanomaterial to display the onset of SIDS.</p>
+                            <p>Developed and implemented a two-dimensional, carbon-based nanomaterial to display the onset of SIDS.</p>
                         </div>
                     </div>
                 </a>
