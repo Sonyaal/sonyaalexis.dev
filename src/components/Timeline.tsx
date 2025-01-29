@@ -3,6 +3,7 @@ import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBuilding } from '@fortawesome/free-solid-svg-icons';
 import { faBrain } from '@fortawesome/free-solid-svg-icons';
+import { faRocket } from '@fortawesome/free-solid-svg-icons';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import '../assets/styles/Timeline.scss'
@@ -13,6 +14,20 @@ function Timeline() {
       <div className="items-container">
         <h1>Career History and Involvements</h1>
         <VerticalTimeline>
+        <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
+            contentArrowStyle={{ borderRight: '7px solid  white' }}
+            date="Aug 2023 - Present"
+            iconStyle={{ background: '#000000', color: 'rgb(39, 40, 34)' }}
+            icon={<FontAwesomeIcon icon={faRocket} />}
+          >
+            <h3 className="vertical-timeline-element-title">USC Makers</h3>
+            <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
+            <p>
+              Developer, Currently designing an EEG controlled drone
+            </p>
+          </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
@@ -36,7 +51,7 @@ function Timeline() {
             <h3 className="vertical-timeline-element-title">Research Intern at EMOTIV</h3>
             <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
             <p>
-              Compiled research for an IFU (patient and clinical) for the EPOC X device (14 Channel Wireless EEG Headset).
+              Compiled research for an IFU (patient and clinical) for the EPOC X Device, a 14 Channel Wireless EEG Headset
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>
