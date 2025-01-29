@@ -34,7 +34,7 @@ function Project() {
                         </div>
                         <div className="project-details">
                             <h2>Visual Regression Testing</h2>
-                            <p>Designed a Visual Regression Testing Library for pixel-by-pixel comparison of widgets in the CI pipeline for PRs.</p>
+                            <p>Designed a Visual Regression Testing Library for Bloomberg Terminal widgets in the CI pipeline during PRs.</p>
                         </div>
                     </div>
                 {/* </Link> */}
