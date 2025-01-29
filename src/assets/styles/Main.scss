@@ -1,0 +1,123 @@
+.about-section {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 0 15%;
+    min-height: 700px;
+    background-image: url("../images/bg-dark.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  
+    .content {
+      text-align: left;
+      z-index: 2;
+  
+      .social_icons {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        color: white;
+  
+        svg {
+          font-size: 1.8em;
+        }
+      }
+  
+      .mobile_social_icons {
+        display: none;
+      }
+  
+      h1 {
+        font-size: 5em;
+        margin: 0;
+      }
+  
+      p {
+        font-size: 1.5em;
+        margin: 0;
+      }
+    }
+  
+    .image-wrapper {
+      z-index: 2;
+  
+      img {
+        width: 250px; /* Larger circle */
+        height: 250px; /* Keep square */
+        border-radius: 50%; /* Make it circular */
+        object-fit: cover; /* Ensures the image fills the circle */
+        object-position: center; /* Keeps the image centered */
+        border: 4px solid white; /* Adds a border to the circle */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 0 5%;
+    }
+  
+    .image-wrapper {
+      margin-bottom: 20px;
+  
+      img {
+        width: 200px; /* Smaller circle for mobile */
+        height: 200px;
+        border: 3px solid white; /* Adjust border size for mobile */
+      }
+    }
+  
+    .content {
+      width: 100%;
+    }
+  
+    .social_icons {
+      display: none;
+    }
+  
+    .mobile_social_icons {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+  
+      svg {
+        font-size: 1.8em;
+      }
+    }
+  
+    h1 {
+      font-size: 3em;
+    }
+  
+    p {
+      font-size: 1.2em;
+    }
+  }
+  
+  @media (max-width: 567px) {
+    .about-section {
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 2.5em;
+    }
+  
+    p {
+      font-size: 1em;
+    }
+  
+    .image-wrapper img {
+      width: 150px; /* Smaller circle for mobile */
+      height: 150px;
+      border: 3px solid white; /* Adjust border size */
+    }
+  }
+  
