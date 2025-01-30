@@ -2,57 +2,61 @@ footer {
     text-align: center;
     padding-top: 50px;
     padding-bottom: 50px;
-    background-color: #f0f0f0; /* Default light mode background */
-    color: #333; /* Default text color for light mode */
-    border-top: 2px solid #ccc; /* Subtle top border for light mode */
+    background-color: #f0f0f0; 
+    color: #333; 
+    border-top: 2px solid #ccc;
     
     svg {
       width: 1.1em !important;
       height: 1.1em !important;
       margin-right: 10px;
-      fill: #333; /* Default icon color in light mode */
+      fill: #333; 
+      transition: fill 0.3s ease;
     }
   
     p {
       font-size: 0.8em;
     }
   
-    /* Optional: Style the links */
     a {
       text-decoration: none;
-      color: #333;
+      color: #0d1116;
       transition: color 0.3s ease;
     }
+
+    a:hover,
+    svg:hover {
+      color: #A9A9A9; 
+      fill: #A9A9A9; 
+    }
+}
   
-    a:hover {
-      color: #0073b1; /* Change color when hovering */
+
+.main-container.dark-mode footer {
+    background-color: #0d1116; 
+    color: #fff;
+    border-top: 2px solid #444; 
+  
+    svg {
+      fill: #fff;
     }
   
-    /* Dark mode styles */
-    .dark-mode & {
-      background-color: #0d1116; /* Dark background for dark mode */
-      color: #fff; /* White text in dark mode */
-      border-top: 2px solid #555; /* Lighter border for dark mode */
-      
-      svg {
-        fill: #fff; /* White icons in dark mode */
-      }
-  
-      a {
-        color: #fff; /* Links in white in dark mode */
-      }
-  
-      a:hover {
-        color: #0073b1; /* Hover color for links */
-      }
+    a {
+      color: #fff; 
     }
-  }
-  
-  /* For mobile responsiveness (optional) */
-  @media (max-width: 768px) {
-    footer {
-      padding-top: 40px;
-      padding-bottom: 40px;
+
+    a:hover,
+    svg:hover {
+      color: #A9A9A9; 
+      fill: #A9A9A9;
     }
-  }
+}
+  
+
+@media (max-width: 768px) {
+footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+}
   
