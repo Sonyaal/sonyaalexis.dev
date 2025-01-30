@@ -11,7 +11,6 @@ const labelsFirst = [
     "React",
     "TypeScript",
     "JavaScript",
-    "HTML",
     "Flask",
     "Python",
     "SQL",
@@ -34,6 +33,7 @@ const labelsThird = [
     "Motors",
     "IoT",
     "Microcontrollers",
+    "Digital Circuits"
 ];
 
 function Expertise() {
@@ -69,7 +69,7 @@ function Expertise() {
                 <div className="skill">
                     <FontAwesomeIcon icon={faRaspberryPi} size="3x"/>
                     <h3>Embedded Systems</h3>
-                    <p>I have hands-on experience with embedded systems development, working with Raspberry Pi, Arduino, and microcontrollers to design and implement hardware-integrated solutions.</p>
+                    <p>I have hands-on experience with embedded systems development, working with Raspberry Pi, Arduino, and other hardware platforms to design and implement integrated solutions.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
                         {labelsThird.map((label, index) => (
