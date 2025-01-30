@@ -16,7 +16,7 @@ function Project() {
                             </div>
                             <div className="project-details">
                                 <h2>(Baby) Robokeeper</h2>
-                                <p>Designed and built a “Robokeeper” to block shots in a foosball table in real time, utilizing CV. Specialized in Embedded Systems.</p>
+                                <p>Designed and built a “Robokeeper” to block shots in a foosball table in real time, utilizing CV.</p>
                             </div>
                         </div>
                     </a>
@@ -42,7 +42,7 @@ function Project() {
                             </div>
                             <div className="project-details">
                                 <h2>Graphene-Based Pressure Sensor</h2>
-                                <p>Developed and implemented a two-dimensional, carbon-based nanomaterial to display the onset of SIDS.</p>
+                                <p>Utilized a two-dimensional, carbon-based nanomaterial to display the onset of SIDS.</p>
                             </div>
                         </div>
                     </a>

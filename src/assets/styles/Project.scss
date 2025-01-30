@@ -24,8 +24,8 @@
     border: 1px solid #ddd;
     padding: 20px;
     border-radius: 12px;
-    height: 350px; /* Adjust height */
-    width: 300px; /* Control width */
+    height: 350px; 
+    width: 300px; 
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -44,7 +44,7 @@
     margin-bottom: 15px;
     display: inline-block;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: black; /* Set icon color to black */
+    color: black; 
 }
 
 .project-details {
@@ -65,7 +65,6 @@
     margin: 0 auto;
 }
 
-/* Add a hover effect to the icon */
 .project-icon:hover {
     background-color: #e0e0e0;
     transform: scale(1.1);
@@ -73,5 +72,5 @@
 }
 
 .project-icon svg {
-    color: black; /* Ensure the icon itself is black */
+    color: black; 
 }
