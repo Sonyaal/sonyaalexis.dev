@@ -2,6 +2,6 @@
 
 ## Features
 
-- Responsive design & mobile-friendly
-- Supports both dark and light modes
+- Responsive design & mobile-friendly.
+- Supports both dark and light modes!
 - Built with React, TypeScript, JavaScript, and SCSS.  
