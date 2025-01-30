@@ -45,7 +45,7 @@ function Expertise() {
                 <div className="skill">
                     <FontAwesomeIcon icon={faPython} size="3x"/>
                     <h3>Software Development</h3>
-                    <p>I have worked with a diverse array of languages from python to C++ for backend development and utilize modern technologies such as React and Flask for frontend development.</p>
+                    <p>I work with a diverse array of languages from Python to C++ for backend development and utilize modern technologies such as React and Flask for frontend development.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
                         {labelsFirst.map((label, index) => (

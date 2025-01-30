@@ -25,7 +25,7 @@ function Timeline() {
             <h3 className="vertical-timeline-element-title">USC Makers</h3>
             <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
             <p>
-              Developer, Designing EEG controlled drone
+              Developer, Currently designing an EEG controlled drone
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
