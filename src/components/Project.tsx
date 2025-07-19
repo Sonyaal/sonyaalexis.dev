@@ -1,7 +1,7 @@
 import React from "react";
 import '../assets/styles/Project.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLaptopCode, faSoccerBall, faHeartbeat } from '@fortawesome/free-solid-svg-icons';
+import { faLaptopCode, faSoccerBall, faHeartbeat, faCubes } from '@fortawesome/free-solid-svg-icons';
 
 function Project() {
     return (
@@ -35,14 +35,14 @@ function Project() {
                     </a>
                 </div>
                 <div className="project">
-                    <a href="https://drive.google.com/file/d/1g_TSxvrwkMKgz2SCPKAuUY68HhRu5xX-/view?usp=sharing" target="_blank" rel="noreferrer">
+                    <a href="https://www.buildstructure.net/" target="_blank" rel="noreferrer">
                         <div className="project-box">
                             <div className="project-icon">
-                                <FontAwesomeIcon icon={faHeartbeat} size="2x" />
+                                <FontAwesomeIcon icon={faCubes} size="2x" />
                             </div>
                             <div className="project-details">
-                                <h2>Graphene-Based Pressure Sensor</h2>
-                                <p>Utilized a two-dimensional, carbon-based nanomaterial to display the onset of SIDS.</p>
+                                <h2>Structure</h2>
+                                <p>An AI platform using vision-language models to analyze architectural drawings and flagzoning/code violations.</p>
                             </div>
                         </div>
                     </a>
