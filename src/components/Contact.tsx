@@ -41,7 +41,7 @@ function Contact() {
             >
               <FontAwesomeIcon icon={faXTwitter} />
             </a>
-            <a href="mailto:salexis@usc.edu" className="contact-link" aria-label="Email">
+            <a href="mailto:salexis@usc.edu"  className="contact-link" aria-label="Email">
               <MailOutlineIcon />
             </a>
           </div>
