@@ -1,62 +1,92 @@
 footer {
+  background-color: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 36px 10%;
+  transition: background-color 0.3s ease;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.footer-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.footer-icon-link {
+  width: auto;
+  height: auto;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+
+  svg {
+    width: 1.15rem !important;
+    height: 1.15rem !important;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    opacity: 0.7;
+    svg { transform: translateY(-2px); }
+  }
+}
+
+.footer-made {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+
+  .footer-heart {
+    color: #E11D48;
+    letter-spacing: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    padding: 28px 6%;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 16px;
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background-color: #f0f0f0; 
-    color: #333; 
-    border-top: 2px solid #ccc;
-    
-    svg {
-      width: 1.1em !important;
-      height: 1.1em !important;
-      margin-right: 10px;
-      fill: #333; 
-      transition: fill 0.3s ease;
-    }
-  
-    p {
-      font-size: 0.8em;
-    }
-  
-    a {
-      text-decoration: none;
-      color: #0d1116;
-      transition: color 0.3s ease;
-    }
+  }
 
-    a:hover,
-    svg:hover {
-      color: #A9A9A9; 
-      fill: #A9A9A9; 
-    }
-}
-  
+  .footer-links {
+    gap: 14px;
+  }
 
-.main-container.dark-mode footer {
-    background-color: #0d1116; 
-    color: #fff;
-    border-top: 2px solid #444; 
-  
-    svg {
-      fill: #fff;
-    }
-  
-    a {
-      color: #fff; 
-    }
+  .footer-icon-link {
+    width: auto;
+    height: auto;
+  }
 
-    a:hover,
-    svg:hover {
-      color: #A9A9A9; 
-      fill: #A9A9A9;
-    }
+  .footer-source {
+    display: none;
+  }
 }
-  
-
-@media (max-width: 768px) {
-footer {
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-}
-  

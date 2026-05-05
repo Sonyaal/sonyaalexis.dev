@@ -1,85 +1,154 @@
-.skills-container {
-    padding: 5% 10%;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+.expertise-section {
+  background-color: var(--bg);
+  padding: 120px 10%;
+}
 
-    svg {
-        color: white;
-    }
+.expertise-header {
+  max-width: 1200px;
+  margin: 0 auto 72px;
+
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    font-weight: 400;
+    color: var(--text);
+    line-height: 1.1;
+    margin-top: 12px;
+  }
 }
-  
-.skills-container .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 50px;
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid var(--border);
 }
-  
-.skills-container .skills-grid .skill {
+
+.expertise-card {
+  padding: 48px 40px 56px 0;
+  border-right: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.4s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  &:hover {
+    background-color: var(--bg-alt);
+    &::before { transform: scaleX(1); }
+  }
+
+  &:last-child {
+    border-right: none;
+    padding-right: 0;
+    padding-left: 40px;
+  }
+
+  &:nth-child(2) {
+    padding-left: 40px;
+  }
+
+  .card-icon {
+    display: inline-flex;
     align-items: center;
-    text-align: left;
-}
-  
-.chip {
-    color: rgb(39, 40, 34) !important;
-    background-color: white !important;
-    font-size: 0.8rem !important;
-    height: 25px !important;
-  
-    span {
-        font-family: 'Courier Prime', monospace;
-        color: rgb(39, 40, 34);
-    }
-  
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 28px;
+    color: var(--accent);
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+
     svg {
-        height: 15px !important;
+      font-size: 1.75rem;
+      color: var(--accent);
     }
-}
+  }
 
-.flex-chips {
-    line-height: 2;
-    margin: 0.5;
+  &:hover .card-icon {
+    transform: translateY(-3px);
+  }
 
-    .chip-title {
-        color: white;
-        padding-right: 10px;
+  h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.65rem;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .card-desc {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 32px;
+  }
+
+  .tag-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.63rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 14px;
+  }
+
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .tag {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 5px 12px;
+    transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+    cursor: default;
+
+    &:hover {
+      border-color: var(--accent);
+      color: var(--text);
+      background-color: var(--bg);
     }
+  }
 }
 
-.flex-chips .MuiChip-root {
-    margin-right: 0.5em;
-}
+@media (max-width: 900px) {
+  .expertise-section {
+    padding: 80px 6%;
+  }
 
-.flex-chips .MuiChip-outlined {
-    background-color: #e0e0e0;
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
-}
+  .expertise-grid {
+    grid-template-columns: 1fr;
+    border-top: none;
+  }
 
-.flex-chips .MuiChip-outlined span {
-    color: rgb(39, 40, 34);
-}
-
-@media screen {
-    @media (max-width: 768px) {
-        .skills-container {
-            display: block;
-            padding-left: 5%;
-            padding-right: 5%;
-        }
-    
-        .skills-container .skills-grid {
-            display: initial;
-        }
-        
-        .skills-container .skills-grid .skill {
-            padding-bottom: 5%;
-        }
-    }
-
-    @media (max-width: 567px) {
-        .skills {
-            font-size: 12px;
-        }
-    }
+  .expertise-card {
+    border-right: none;
+    border-top: 1px solid var(--border);
+    padding: 40px 0 !important;
+  }
 }

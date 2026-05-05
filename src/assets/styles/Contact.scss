@@ -1,48 +1,120 @@
-.contact_wrapper svg {
-  font-size: 1em;
-  vertical-align: middle;
-  margin-right: 5px;
+.contact-section {
+  background-color: var(--bg-alt);
+  padding: 120px 10%;
+  transition: background-color 0.3s ease;
 }
 
-.contact-form {
-  padding-top: 20px;
+.contact-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
 
-  button {
-    float: right;
-    background-color: white;
-    color: #050f0b;
+.contact-text {
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    font-weight: 300;
+    color: var(--text);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-top: 12px;
+    margin-bottom: 28px;
   }
 
-  button:hover {
-    background-color: #D3D3D3;
-    color: white;
-  }
-
-  fieldset {
-    background-color: white;
+  p {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    margin-bottom: 40px;
   }
 }
 
-label {
-  font-size: 1.2rem;
-  font-family: 'DomaineDispNar-Medium', sans-serif;
-}
-
-.form-flex {
+.contact-links {
   display: flex;
-  gap: 15px;
-  padding-bottom: 15px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 18px;
 }
 
-.form-flex .MuiFormControl-root {
-  width: 100%;
+.contact-link {
+  width: auto;
+  height: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  color: var(--text-secondary);
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+
+  svg {
+    color: var(--accent);
+    font-size: 1.45rem;
+  }
+
+  &:hover {
+    color: var(--text);
+    opacity: 1;
+    transform: translateY(-2px);
+  }
 }
 
-form {
-  width: 100% !important;
+.contact-cta {
+  .cta-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .cta-email {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 300;
+    color: var(--text);
+    letter-spacing: -0.01em;
+    display: block;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+    margin-bottom: 32px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+      opacity: 1;
+    }
+  }
 }
 
-.body-form {
-  width: 100% !important;
-  margin-bottom: 15px !important;
+@media (max-width: 900px) {
+  .contact-section {
+    padding: 80px 6%;
+  }
+
+  .contact-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .contact-links {
+    gap: 14px;
+  }
+
+  .contact-link {
+    svg {
+      font-size: 1.3rem;
+    }
+  }
 }

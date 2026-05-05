@@ -1,81 +1,107 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import MailIcon from '@mui/icons-material/Mail';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import '../assets/styles/Main.scss';
 import headshot from '../assets/images/headshot.png';
 
 function Main() {
-  const [displayText, setDisplayText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-
-  const descriptions = [
-    "A computer engineer.",
-    "A passionate problem solver.",
-    "A USC Trojan.",
-    "A curious thinker."
-  ];
+  const heroRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleTyping = () => {
-      const currentText = descriptions[currentIndex];
+    const hero = heroRef.current;
+    if (!hero) return;
 
-      if (!isDeleting && !isPaused) {
-        // Typing forward
-        setDisplayText(currentText.slice(0, charIndex + 1));
-        setCharIndex((prev) => prev + 1);
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!imageRef.current) return;
+      const { left, top, width, height } = hero.getBoundingClientRect();
+      const x = (e.clientX - left - width / 2) / width;
+      const y = (e.clientY - top - height / 2) / height;
+      imageRef.current.style.transform = `translate(${x * 14}px, ${y * 10}px)`;
+    };
 
-        if (charIndex + 1 === currentText.length) {
-          // Pause briefly before deleting
-          setIsPaused(true);
-          setTimeout(() => setIsPaused(false), 1000); // 1 second pause
-          setIsDeleting(true);
-        }
-      } else if (isDeleting && !isPaused) {
-        // Deleting backward
-        setDisplayText(currentText.slice(0, charIndex - 1));
-        setCharIndex((prev) => prev - 1);
-
-        if (charIndex === 2) {
-          // Pause briefly before typing the next sentence
-          setIsPaused(true);
-          setTimeout(() => {
-            setIsPaused(false);
-            setIsDeleting(false);
-            setCurrentIndex((prev) => (prev + 1) % descriptions.length); // Move to the next sentence
-          }, 1); // minimal pause
-        }
+    const handleMouseLeave = () => {
+      if (imageRef.current) {
+        imageRef.current.style.transform = 'translate(0, 0)';
       }
     };
 
-    const delay = isPaused ? 100 : isDeleting ? 50 : 80; // Adjust speeds for each phase
-    const timeout = setTimeout(handleTyping, delay);
-
-    return () => clearTimeout(timeout);
-  }, [charIndex, isDeleting, currentIndex, isPaused, descriptions]);
+    hero.addEventListener('mousemove', handleMouseMove);
+    hero.addEventListener('mouseleave', handleMouseLeave);
+    return () => {
+      hero.removeEventListener('mousemove', handleMouseMove);
+      hero.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }, []);
 
   return (
     <div className="container">
-      <div className="about-section">
-        <div className="image-wrapper">
-          <img src={headshot} alt="Avatar" />
+      <div className="hero" ref={heroRef}>
+        <div className="hero-grain" aria-hidden="true" />
+        <div className="hero-inner">
+          <div className="hero-text">
+            <h1 className="hero-name">
+              Sonya<br />
+              <em>Alexis</em>
+            </h1>
+            <p className="hero-blurb">
+              I study Computer Engineering and Computer Science at the University of Southern California where I am deeply immersed in the founder-builder ecosystem.
+            </p>
+            <p className="hero-blurb hero-blurb--secondary">
+              This summer, I’ll be working on LLM-powered testing at Databricks. Previously, I've worked on  financial platforms and AI-driven validation systems at Bloomberg.            
+            </p>
+            <div className="hero-divider" />
+            <div className="hero-links">
+              <a
+                href="https://github.com/Sonyaal"
+                target="_blank"
+                rel="noreferrer"
+                className="hero-link"
+                aria-label="GitHub"
+              >
+                <GitHubIcon />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/sonya-alexis/"
+                target="_blank"
+                rel="noreferrer"
+                className="hero-link"
+                aria-label="LinkedIn"
+              >
+                <LinkedInIcon />
+              </a>
+              <a
+                href="https://x.com/sonyaalexisss"
+                target="_blank"
+                rel="noreferrer"
+                className="hero-link"
+                aria-label="X"
+              >
+                <FontAwesomeIcon icon={faXTwitter} />
+              </a>
+              <a href="mailto:salexis@usc.edu" className="hero-link" aria-label="Email">
+                <MailOutlineIcon />
+              </a>
+            </div>
+          </div>
+
+          <div className="hero-image-wrap">
+            <div className="hero-img-frame" ref={imageRef}>
+              <img src={headshot} alt="Sonya Alexis" />
+            </div>
+            <div className="hero-badge">
+              <span>USC</span>
+              <span>Computer Engineering</span>
+            </div>
+          </div>
         </div>
-        <div className="content">
-          <div className="social_icons">
-            <a href="https://github.com/Sonyaal" target="_blank" rel="noreferrer"><GitHubIcon /></a>
-            <a href="https://www.linkedin.com/in/sonya-alexis/" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
-            <a href="mailto:salexis@usc.edu"><MailIcon /></a>
-          </div>
-          <h1>Sonya Alexis</h1>
-          <p>{displayText}</p>
-          <div className="mobile_social_icons">
-            <a href="https://github.com/Sonyaal" target="_blank" rel="noreferrer"><GitHubIcon /></a>
-            <a href="https://www.linkedin.com/in/sonya-alexis/" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
-            <a href="mailto:salexis@usc.edu"><MailIcon /></a>
-          </div>
+
+        <div className="hero-scroll-hint" aria-hidden="true">
+          <span className="scroll-line" />
+          <span className="scroll-label">Scroll</span>
         </div>
       </div>
     </div>
