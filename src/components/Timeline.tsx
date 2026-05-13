@@ -75,9 +75,9 @@ const entries: TimelineEntry[] = [
     logoColor: "",
     desc: "",
     bullets: [
-      "Reinforcement learning-controlled walking robot (2025-26)",
-      "EEG-controlled drone (2024–25)",
-      "Computer-vision robotic goalkeeper (2023–24)",
+      "Built a walking robot using reinforcement learning and wireless-controlled animations (2025–26)",
+      "Built a brain-controlled drone using electroencephalography (EEG) signals (2024–25)",
+      "Built an autonomous foosball goalie system using computer vision (2023–24)",
     ],
     tags: ["RL", "BCI", "OpenCV"],
   },
