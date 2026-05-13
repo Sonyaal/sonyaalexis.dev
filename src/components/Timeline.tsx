@@ -91,7 +91,7 @@ const entries: TimelineEntry[] = [
     logoSrc: bloombergLogo,
     logoAlt: "Bloomberg logo",
     logoColor: "",
-    desc: "Built automated CI/CD pipelines to detect regressions at scale across the Bloomberg Terminal.",
+    desc: "Designed and developed automated CI/CD pipelines to detect regressions at scale across the Bloomberg Terminal.",
     tags: ["Javascript", "Jenkins", "GitHub Actions"],
   },
   {
