@@ -52,7 +52,7 @@ const entries: TimelineEntry[] = [
   },
   {
     date: "Jan 2025 – Present",
-    role: "Technical Founder → Director of Industry & Sponsorship → President",
+    role: "President & Technical Founder",
     company: "USC LavaLab",
     location: "Los Angeles, CA",
     type: "Leadership",
