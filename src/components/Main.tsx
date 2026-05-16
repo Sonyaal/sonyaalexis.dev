@@ -48,11 +48,10 @@ function Main() {
               <span className="hero-name-last">alexis</span><span className="hero-cursor" aria-hidden="true">_</span>
             </h1>
             <p className="hero-blurb">
-              Hi! I am currerntly studying Computer Engineering and Computer Science at the University of Southern California where I am building intelligent systems centered around human experience.
+              Hi! I am currently studying Computer Engineering and Computer Science at the University of Southern California where I am building intelligent systems centered around human experience.
             </p>
             <p className="hero-blurb hero-blurb--secondary">
-              This summer, I’ll be working on LLM-powered testing at Databricks. Previously, I've worked on  financial platforms and AI-driven validation systems at Bloomberg.            
-            </p>
+              This summer, I’ll be working on LLM-powered testing at Databricks. Previously, I worked on financial infrastructure and AI-driven validation systems at Bloomberg.            </p>
             <div className="hero-divider" />
             <div className="hero-links">
               <a
