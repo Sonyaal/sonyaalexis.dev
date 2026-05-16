@@ -122,7 +122,7 @@ function AccordionEntry({ entry, index }: { entry: TimelineEntry; index: number 
   }, []);
 
   return (
-    <div className={`tl-row${open ? ' tl-row--open' : ''}`}>
+    <div className={`tl-row${open ? ' tl-row--open' : ''}`} data-type={entry.type.toLowerCase()}>
       <button
         className="tl-trigger"
         onClick={() => hasContent && setOpen((p) => !p)}
@@ -130,36 +130,34 @@ function AccordionEntry({ entry, index }: { entry: TimelineEntry; index: number 
         style={{ cursor: hasContent ? 'pointer' : 'default' }}
       >
         <div className="tl-trigger-main">
-          <div
-            className={`tl-logo${entry.logoSrc ? ' tl-logo--image' : ''}`}
-            style={{ backgroundColor: entry.logoSrc ? 'transparent' : entry.logoColor }}
-            aria-hidden="true"
-          >
-            {entry.logoSrc ? (
-              <img src={entry.logoSrc} alt={entry.logoAlt ?? `${entry.company} logo`} />
-            ) : (
-              entry.logoInitial
-            )}
+          <div className="tl-logo-wrap" aria-hidden="true">
+            <div
+              className={`tl-logo${entry.logoSrc ? ' tl-logo--image' : ''}`}
+              style={{ backgroundColor: entry.logoSrc ? 'transparent' : entry.logoColor }}
+            >
+              {entry.logoSrc ? (
+                <img src={entry.logoSrc} alt={entry.logoAlt ?? `${entry.company} logo`} />
+              ) : (
+                entry.logoInitial
+              )}
+            </div>
           </div>
           <div className="tl-main-text">
-            <span className="tl-role">{entry.role}</span>
-            <span className="tl-company">
-              <a
-                href={entry.href}
-                target="_blank"
-                rel="noreferrer"
-                className="tl-company-link"
-                onClick={(e) => e.stopPropagation()}
-              >
-                {entry.company}
-              </a>
-            </span>
-            <span className="tl-location">{entry.location}</span>
-            <div className="tl-tags">
-              {entry.tags.map((tag) => (
-                <span className="tl-tag" key={tag}>{tag}</span>
-              ))}
+            <div className="tl-company-row">
+              <span className="tl-company">
+                <a
+                  href={entry.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="tl-company-link"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  {entry.company}
+                </a>
+              </span>
             </div>
+            <span className="tl-role">{entry.role}</span>
+            <span className="tl-location">{entry.location}</span>
           </div>
         </div>
 

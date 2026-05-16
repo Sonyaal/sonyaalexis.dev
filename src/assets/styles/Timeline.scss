@@ -26,13 +26,35 @@
 /* ─── List ──────────────────────────────────────── */
 
 .tl-list {
-  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 /* ─── Row ───────────────────────────────────────── */
 
 .tl-row {
-  border-bottom: 1px solid var(--border);
+  background-color: var(--bg);
+  border-radius: 6px;
+  padding: 0 24px;
+  box-shadow:
+    0 1px 3px rgba(26, 23, 20, 0.06),
+    0 1px 2px rgba(26, 23, 20, 0.04);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+
+  &:hover {
+    box-shadow:
+      0 6px 18px rgba(26, 23, 20, 0.10),
+      0 2px 6px rgba(26, 23, 20, 0.06);
+    transform: translateY(-2px);
+  }
+
+  &--open {
+    box-shadow:
+      0 6px 20px rgba(26, 23, 20, 0.12),
+      0 2px 6px rgba(26, 23, 20, 0.07);
+  }
+
 }
 
 /* ─── Trigger ───────────────────────────────────── */
@@ -41,7 +63,7 @@
   width: 100%;
   background: none;
   border: none;
-  padding: 28px 0;
+  padding: 24px 0;
   cursor: pointer;
   display: flex;
   align-items: flex-start;
@@ -58,7 +80,7 @@
   align-items: center;
   gap: 16px;
   flex-shrink: 0;
-  padding-top: 6px;
+  padding-top: 2px;
   margin-left: auto;
 }
 
@@ -75,35 +97,46 @@
 
 .tl-badge {
   font-family: 'Jost', sans-serif;
-  font-size: 0.56rem;
+  font-size: 0.55rem;
   font-weight: 500;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  border-radius: 2px;
-  padding: 3px 8px;
-  display: inline-block;
-  width: fit-content;
+  border-radius: 3px;
+  padding: 2px 7px;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
   background-color: var(--border);
   color: var(--text-secondary);
 
   &--incoming {
-    background-color: var(--text);
-    color: var(--bg);
+    background-color: rgba(34, 197, 94, 0.12);
+    color: #16a34a;
+    outline: 1px solid rgba(34, 197, 94, 0.3);
+  }
+
+  &--internship {
+    background-color: rgba(184, 168, 152, 0.15);
+    color: var(--text-secondary);
+    outline: 1px solid var(--border);
   }
 
   &--leadership {
-    background-color: #990000;
-    color: #fff;
+    background-color: rgba(153, 0, 0, 0.08);
+    color: #990000;
+    outline: 1px solid rgba(153, 0, 0, 0.2);
   }
 
   &--research {
-    background-color: #8B5CF6;
-    color: #fff;
+    background-color: rgba(139, 92, 246, 0.1);
+    color: #7c3aed;
+    outline: 1px solid rgba(139, 92, 246, 0.2);
   }
 
   &--club {
-    background-color: #2563EB;
-    color: #fff;
+    background-color: rgba(37, 99, 235, 0.08);
+    color: #1d4ed8;
+    outline: 1px solid rgba(37, 99, 235, 0.2);
   }
 }
 
@@ -115,10 +148,27 @@
   gap: 16px;
 }
 
+.tl-logo-wrap {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 7px;
+  background-color: var(--bg-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s ease;
+
+  .tl-trigger:hover & {
+    border-color: var(--accent);
+  }
+}
+
 .tl-logo {
-  width: 40px;
-  height: 40px;
-  border-radius: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -126,16 +176,11 @@
   font-size: 0.9rem;
   font-weight: 600;
   color: #fff;
-  flex-shrink: 0;
   letter-spacing: 0;
-  opacity: 0.9;
 }
 
 .tl-logo--image {
-  overflow: hidden;
   background-color: transparent;
-  padding: 0;
-  border-radius: 0;
 
   img {
     width: 100%;
@@ -148,28 +193,23 @@
 .tl-main-text {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 4px;
   flex: 1;
+  padding-top: 1px;
 }
 
-.tl-role {
-  font-family: 'Jost', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 400;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-secondary);
-  display: block;
-  margin-bottom: 2px;
+.tl-company-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .tl-company {
-  display: block;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.55rem;
+  font-size: 1.45rem;
   font-weight: 500;
   line-height: 1.2;
-  transition: color 0.2s ease;
 }
 
 .tl-company-link {
@@ -182,15 +222,24 @@
   }
 }
 
+.tl-role {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.83rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--text-secondary);
+  display: block;
+}
+
 .tl-location {
   font-family: 'Jost', sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 400;
   letter-spacing: 0.06em;
   color: var(--text-secondary);
+  opacity: 0.65;
   text-transform: uppercase;
   display: block;
-  margin-top: 2px;
 }
 
 .tl-tags {
@@ -254,7 +303,9 @@
 }
 
 .tl-body-inner {
-  padding: 4px 0 32px calc(40px + 16px);
+  padding: 0 0 28px calc(44px + 16px);
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -382,8 +433,12 @@
     padding: 80px 6%;
   }
 
+  .tl-row {
+    padding: 0 16px;
+  }
+
   .tl-trigger {
-    padding: 22px 0;
+    padding: 20px 0;
     gap: 12px;
   }
 
@@ -392,7 +447,8 @@
   }
 
   .tl-body-inner {
-    padding: 4px 0 28px 0;
+    padding: 16px 0 24px 0;
+    border-top: 1px solid var(--border);
   }
 
   .tl-awards-list {

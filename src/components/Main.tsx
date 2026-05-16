@@ -45,7 +45,7 @@ function Main() {
           <div className="hero-text">
             <h1 className="hero-name">
               Sonya<br />
-              <em>Alexis</em>
+              <span className="hero-name-last">Alexis</span><span className="hero-cursor" aria-hidden="true">_</span>
             </h1>
             <p className="hero-blurb">
               I study Computer Engineering and Computer Science at the University of Southern California where I am deeply immersed in the founder-builder ecosystem.
@@ -92,10 +92,7 @@ function Main() {
             <div className="hero-img-frame" ref={imageRef}>
               <img src={headshot} alt="Sonya Alexis" />
             </div>
-            <div className="hero-badge">
-              <span>USC</span>
-              <span>Computer Engineering</span>
-            </div>
+
           </div>
         </div>
 

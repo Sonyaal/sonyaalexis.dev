@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import {
   Main,
   Timeline,
+  Project,
   Navigation,
   Footer,
   Cursor,
@@ -43,6 +44,7 @@ function App() {
       <FadeIn transitionDuration={700}>
         <Main />
         <Timeline />
+        <Project />
       </FadeIn>
       <Footer />
     </div>
