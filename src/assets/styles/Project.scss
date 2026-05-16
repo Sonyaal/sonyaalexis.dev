@@ -9,6 +9,7 @@
 .projects-header {
   padding: 0 10%;
   margin-bottom: 48px;
+  text-align: center;
 
   h2 {
     font-family: 'Cormorant Garamond', serif;
@@ -17,6 +18,7 @@
     color: var(--text);
     line-height: 1.1;
     margin: 0;
+    text-transform: lowercase;
   }
 }
 
