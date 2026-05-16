@@ -52,7 +52,7 @@ const projects = [
     badge: "Coming soon on Chrome Web Store",
   },
   {
-    href: "https://drive.google.com/file/d/1T0C6_GX38b6gIT0Oa1hwwFksLoW-gFxh/view?usp=sharing",
+    href: "",
     title: "Monitoring Wearable",
     num: "05",
     category: "Hardware · Research",
